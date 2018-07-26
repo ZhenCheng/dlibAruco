@@ -16,6 +16,7 @@
 
 package com.tzutalin.dlibtest;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
@@ -50,6 +51,7 @@ import java.util.List;
 /**
  * Class that takes in preview frames and converts the image to Bitmaps to process with dlib lib.
  */
+@SuppressLint("NewApi")
 public class OnGetImageListener implements OnImageAvailableListener {
     private static final boolean SAVE_PREVIEW_BITMAP = false;
 
