@@ -157,6 +157,7 @@ public class CameraConnectionFragment extends Fragment {
                     createCameraPreviewSession();
                 }
 
+                @SuppressLint("NewApi")
                 @Override
                 public void onDisconnected(final CameraDevice cd) {
                     cameraOpenCloseLock.release();
@@ -253,7 +254,7 @@ public class CameraConnectionFragment extends Fragment {
      * @param aspectRatio The aspect ratio
      * @return The optimal {@code Size}, or an arbitrary one if none were big enough
      */
-    @SuppressLint("LongLogTag")
+    @SuppressLint({"LongLogTag", "NewApi"})
     @DebugLog
     private static Size chooseOptimalSize(
             final Size[] choices, final int width, final int height, final Size aspectRatio) {
@@ -330,7 +331,7 @@ public class CameraConnectionFragment extends Fragment {
      * @param height The height of available size for camera preview
      */
     @DebugLog
-    @SuppressLint("LongLogTag")
+    @SuppressLint({"LongLogTag", "NewApi"})
     private void setUpCameraOutputs(final int width, final int height) {
         final Activity activity = getActivity();
         final CameraManager manager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
@@ -412,7 +413,7 @@ public class CameraConnectionFragment extends Fragment {
     /**
      * Opens the camera specified by {@link CameraConnectionFragment#cameraId}.
      */
-    @SuppressLint("LongLogTag")
+    @SuppressLint({"LongLogTag", "NewApi"})
     @DebugLog
     private void openCamera(final int width, final int height) {
         setUpCameraOutputs(width, height);
@@ -438,6 +439,7 @@ public class CameraConnectionFragment extends Fragment {
     /**
      * Closes the current {@link CameraDevice}.
      */
+    @SuppressLint("NewApi")
     @DebugLog
     private void closeCamera() {
         try {
@@ -481,7 +483,7 @@ public class CameraConnectionFragment extends Fragment {
     /**
      * Stops the background thread and its {@link Handler}.
      */
-    @SuppressLint("LongLogTag")
+    @SuppressLint({"LongLogTag", "NewApi"})
     @DebugLog
     private void stopBackgroundThread() {
         backgroundThread.quitSafely();
@@ -521,7 +523,7 @@ public class CameraConnectionFragment extends Fragment {
     /**
      * Creates a new {@link CameraCaptureSession} for camera preview.
      */
-    @SuppressLint("LongLogTag")
+    @SuppressLint({"LongLogTag", "NewApi"})
     @DebugLog
     private void createCameraPreviewSession() {
         try {
@@ -601,6 +603,7 @@ public class CameraConnectionFragment extends Fragment {
      * @param viewWidth  The width of `mTextureView`
      * @param viewHeight The height of `mTextureView`
      */
+    @SuppressLint("NewApi")
     @DebugLog
     private void configureTransform(final int viewWidth, final int viewHeight) {
         final Activity activity = getActivity();
@@ -616,7 +619,7 @@ public class CameraConnectionFragment extends Fragment {
         if (Surface.ROTATION_90 == rotation || Surface.ROTATION_270 == rotation) {
             bufferRect.offset(centerX - bufferRect.centerX(), centerY - bufferRect.centerY());
             matrix.setRectToRect(viewRect, bufferRect, Matrix.ScaleToFit.FILL);
-            final float scale =
+            @SuppressLint({"NewApi", "LocalSuppress"}) final float scale =
                     Math.max(
                             (float) viewHeight / previewSize.getHeight(),
                             (float) viewWidth / previewSize.getWidth());
@@ -632,6 +635,7 @@ public class CameraConnectionFragment extends Fragment {
      * Compares two {@code Size}s based on their areas.
      */
     static class CompareSizesByArea implements Comparator<Size> {
+        @SuppressLint("NewApi")
         @Override
         public int compare(final Size lhs, final Size rhs) {
             // We cast here to ensure the multiplications won't overflow
@@ -670,4 +674,6 @@ public class CameraConnectionFragment extends Fragment {
                     .create();
         }
     }
+
+
 }

@@ -48,7 +48,7 @@ import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
-    private static final int RESULT_LOAD_IMG = 1;
+
     private static final int REQUEST_CODE_PERMISSION = 2;
 
     private static final String TAG = "MainActivity";
@@ -61,20 +61,13 @@ public class MainActivity extends AppCompatActivity {
     };
 
     // UI
-    private ProgressDialog mDialog;
-    private MaterialListView mListView;
     private FloatingActionButton mFabCamActionBt;
 
-    private String mTestImgPath;
-    private FaceDet mFaceDet;
-    private PedestrianDet mPersonDet;
-    private List<Card> mCard = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mListView = (MaterialListView) findViewById(R.id.material_listview);
 
         // Just use hugo to print log
         isExternalStorageWritable();
@@ -91,10 +84,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void setupUI() {
-        mListView = (MaterialListView) findViewById(R.id.material_listview);
         mFabCamActionBt = (FloatingActionButton) findViewById(R.id.fab_cam);
-
-
         mFabCamActionBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -156,30 +146,6 @@ public class MainActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         if (requestCode == REQUEST_CODE_PERMISSION) {
             Toast.makeText(MainActivity.this, "Demo using static images", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        try {
-            // When an Image is picked
-            if (requestCode == RESULT_LOAD_IMG && resultCode == RESULT_OK && null != data) {
-                // Get the Image from data
-                Uri selectedImage = data.getData();
-                String[] filePathColumn = {MediaStore.Images.Media.DATA};
-                // Get the cursor
-                Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
-                cursor.moveToFirst();
-                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                mTestImgPath = cursor.getString(columnIndex);
-                cursor.close();
-
-            } else {
-                Toast.makeText(this, "You haven't picked Image", Toast.LENGTH_LONG).show();
-            }
-        } catch (Exception e) {
-            Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show();
         }
     }
 }
