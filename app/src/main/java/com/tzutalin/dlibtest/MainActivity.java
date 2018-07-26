@@ -63,9 +63,7 @@ public class MainActivity extends AppCompatActivity {
     // UI
     private ProgressDialog mDialog;
     private MaterialListView mListView;
-    private FloatingActionButton mFabActionBt;
     private FloatingActionButton mFabCamActionBt;
-    private Toolbar mToolbar;
 
     private String mTestImgPath;
     private FaceDet mFaceDet;
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mListView = (MaterialListView) findViewById(R.id.material_listview);
-        setSupportActionBar(mToolbar);
+
         // Just use hugo to print log
         isExternalStorageWritable();
         isExternalStorageReadable();
@@ -94,19 +92,8 @@ public class MainActivity extends AppCompatActivity {
 
     protected void setupUI() {
         mListView = (MaterialListView) findViewById(R.id.material_listview);
-        mFabActionBt = (FloatingActionButton) findViewById(R.id.fab);
         mFabCamActionBt = (FloatingActionButton) findViewById(R.id.fab_cam);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        mFabActionBt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // launch Gallery
-                Toast.makeText(MainActivity.this, "Pick one image", Toast.LENGTH_SHORT).show();
-                Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(galleryIntent, RESULT_LOAD_IMG);
-            }
-        });
 
         mFabCamActionBt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,9 +101,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, CameraActivity.class));
             }
         });
-
-        mToolbar.setTitle(getString(R.string.app_name));
-        Toast.makeText(MainActivity.this, getString(R.string.description_info), Toast.LENGTH_LONG).show();
     }
 
     /**
@@ -168,25 +152,10 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    @DebugLog
-    protected void demoStaticImage() {
-        if (mTestImgPath != null) {
-            Timber.tag(TAG).d("demoStaticImage() launch a task to det");
-            runDemosAsync(mTestImgPath);
-        } else {
-            Timber.tag(TAG).d("demoStaticImage() mTestImgPath is null, go to gallery");
-            Toast.makeText(MainActivity.this, "Pick an image to run algorithms", Toast.LENGTH_SHORT).show();
-            // Create intent to Open Image applications like Gallery, Google Photos
-            Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            startActivityForResult(galleryIntent, RESULT_LOAD_IMG);
-        }
-    }
-
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         if (requestCode == REQUEST_CODE_PERMISSION) {
             Toast.makeText(MainActivity.this, "Demo using static images", Toast.LENGTH_SHORT).show();
-            demoStaticImage();
         }
     }
 
@@ -205,195 +174,12 @@ public class MainActivity extends AppCompatActivity {
                 int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
                 mTestImgPath = cursor.getString(columnIndex);
                 cursor.close();
-                if (mTestImgPath != null) {
-                    runDemosAsync(mTestImgPath);
-                    Toast.makeText(this, "Img Path:" + mTestImgPath, Toast.LENGTH_SHORT).show();
-                }
+
             } else {
                 Toast.makeText(this, "You haven't picked Image", Toast.LENGTH_LONG).show();
             }
         } catch (Exception e) {
             Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show();
         }
-    }
-
-    // ==========================================================
-    // Tasks inner class
-    // ==========================================================
-
-    @NonNull
-    private void runDemosAsync(@NonNull final String imgPath) {
-        demoPersonDet(imgPath);
-        demoFaceDet(imgPath);
-    }
-
-    private void demoPersonDet(final String imgPath) {
-        new AsyncTask<Void, Void, List<VisionDetRet>>() {
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-            }
-
-            @Override
-            protected void onPostExecute(List<VisionDetRet> personList) {
-                super.onPostExecute(personList);
-                if (personList.size() > 0) {
-                    Card card = new Card.Builder(MainActivity.this)
-                            .withProvider(BigImageCardProvider.class)
-                            .setDrawable(drawRect(imgPath, personList, Color.BLUE))
-                            .setTitle("Person det")
-                            .endConfig()
-                            .build();
-                    mCard.add(card);
-                } else {
-                    Toast.makeText(getApplicationContext(), "No person", Toast.LENGTH_LONG).show();
-                }
-                updateCardListView();
-            }
-
-            @Override
-            protected List<VisionDetRet> doInBackground(Void... voids) {
-                // Init
-                if (mPersonDet == null) {
-                    mPersonDet = new PedestrianDet();
-                }
-
-                Timber.tag(TAG).d("Image path: " + imgPath);
-
-                List<VisionDetRet> personList = mPersonDet.detect(imgPath);
-                return personList;
-            }
-        }.execute();
-    }
-
-    private void demoFaceDet(final String imgPath) {
-        new AsyncTask<Void, Void, List<VisionDetRet>>() {
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-                showDiaglog("Detecting faces");
-            }
-
-            @Override
-            protected void onPostExecute(List<VisionDetRet> faceList) {
-                super.onPostExecute(faceList);
-                if (faceList.size() > 0) {
-                    Card card = new Card.Builder(MainActivity.this)
-                            .withProvider(BigImageCardProvider.class)
-                            .setDrawable(drawRect(imgPath, faceList, Color.GREEN))
-                            .setTitle("Face det")
-                            .endConfig()
-                            .build();
-                    mCard.add(card);
-                } else {
-                    Toast.makeText(getApplicationContext(), "No face", Toast.LENGTH_LONG).show();
-                }
-                updateCardListView();
-                dismissDialog();
-            }
-
-            @Override
-            protected List<VisionDetRet> doInBackground(Void... voids) {
-                // Init
-                if (mFaceDet == null) {
-                    mFaceDet = new FaceDet(Constants.getFaceShapeModelPath());
-                }
-
-                final String targetPath = Constants.getFaceShapeModelPath();
-                if (!new File(targetPath).exists()) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(MainActivity.this, "Copy landmark model to " + targetPath, Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    FileUtils.copyFileFromRawToOthers(getApplicationContext(), R.raw.shape_predictor_68_face_landmarks, targetPath);
-                }
-
-                List<VisionDetRet> faceList = mFaceDet.detect(imgPath);
-                return faceList;
-            }
-        }.execute();
-    }
-
-    private void updateCardListView() {
-        mListView.clearAll();
-        for (Card each : mCard) {
-            mListView.add(each);
-        }
-    }
-
-    private void showDiaglog(String title) {
-        dismissDialog();
-        mDialog = ProgressDialog.show(MainActivity.this, title, "process..", true);
-    }
-
-    private void dismissDialog() {
-        if (mDialog != null) {
-            mDialog.dismiss();
-            mDialog = null;
-        }
-    }
-
-    @DebugLog
-    private BitmapDrawable drawRect(String path, List<VisionDetRet> results, int color) {
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inSampleSize = 1;
-        Bitmap bm = BitmapFactory.decodeFile(path, options);
-        android.graphics.Bitmap.Config bitmapConfig = bm.getConfig();
-        // set default bitmap config if none
-        if (bitmapConfig == null) {
-            bitmapConfig = android.graphics.Bitmap.Config.ARGB_8888;
-        }
-        // resource bitmaps are imutable,
-        // so we need to convert it to mutable one
-        bm = bm.copy(bitmapConfig, true);
-        int width = bm.getWidth();
-        int height = bm.getHeight();
-        // By ratio scale
-        float aspectRatio = bm.getWidth() / (float) bm.getHeight();
-
-        final int MAX_SIZE = 512;
-        int newWidth = MAX_SIZE;
-        int newHeight = MAX_SIZE;
-        float resizeRatio = 1;
-        newHeight = Math.round(newWidth / aspectRatio);
-        if (bm.getWidth() > MAX_SIZE && bm.getHeight() > MAX_SIZE) {
-            Timber.tag(TAG).d("Resize Bitmap");
-            bm = getResizedBitmap(bm, newWidth, newHeight);
-            resizeRatio = (float) bm.getWidth() / (float) width;
-            Timber.tag(TAG).d("resizeRatio " + resizeRatio);
-        }
-
-        // Create canvas to draw
-        Canvas canvas = new Canvas(bm);
-        Paint paint = new Paint();
-        paint.setColor(color);
-        paint.setStrokeWidth(2);
-        paint.setStyle(Paint.Style.STROKE);
-        // Loop result list
-        for (VisionDetRet ret : results) {
-            Rect bounds = new Rect();
-            bounds.left = (int) (ret.getLeft() * resizeRatio);
-            bounds.top = (int) (ret.getTop() * resizeRatio);
-            bounds.right = (int) (ret.getRight() * resizeRatio);
-            bounds.bottom = (int) (ret.getBottom() * resizeRatio);
-            canvas.drawRect(bounds, paint);
-            // Get landmark
-            ArrayList<Point> landmarks = ret.getFaceLandmarks();
-            for (Point point : landmarks) {
-                int pointX = (int) (point.x * resizeRatio);
-                int pointY = (int) (point.y * resizeRatio);
-                canvas.drawCircle(pointX, pointY, 2, paint);
-            }
-        }
-
-        return new BitmapDrawable(getResources(), bm);
-    }
-
-    @DebugLog
-    private Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
-        Bitmap resizedBitmap = Bitmap.createScaledBitmap(bm, newWidth, newHeight, true);
-        return resizedBitmap;
     }
 }
