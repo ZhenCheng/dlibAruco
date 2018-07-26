@@ -214,6 +214,7 @@ public class OnGetImageListener implements OnImageAvailableListener {
             return;
         }
 
+        // covert RGB to Bitmap
         mRGBframeBitmap.setPixels(mRGBBytes, 0, mPreviewWdith, 0, 0, mPreviewWdith, mPreviewHeight);
         //Log.d(TAG, String.format("Initializing[mRGBframeBitmap] at size %dx%d", mRGBframeBitmap.getWidth(), mRGBframeBitmap.getHeight()));
 
