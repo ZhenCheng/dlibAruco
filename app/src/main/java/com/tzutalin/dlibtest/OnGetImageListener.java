@@ -151,10 +151,10 @@ public class OnGetImageListener implements OnImageAvailableListener {
 
         // create a Mat to Output
         Mat rgbaMatOut = new Mat(inRgbaImage.getWidth(), inRgbaImage.getHeight(), CvType.CV_8UC4, Scalar.all(255));
-        Bitmap bm32 = inRgbaImage.copy(Config.ARGB_8888,true);
+        //Bitmap bm32 = inRgbaImage.copy(Config.ARGB_8888,true);
 
         // convert Bitmap to Mat using OpenCV-Java
-        Utils.bitmapToMat(bm32,rgbaMatOut);
+        Utils.bitmapToMat(inRgbaImage,rgbaMatOut);
 
         return rgbaMatOut;
     }
@@ -254,16 +254,14 @@ public class OnGetImageListener implements OnImageAvailableListener {
 
                         synchronized (OnGetImageListener.this) {
 
-                            Log.d(TAG, "StartOnCameraFrame");
                             Mat matRgbaInput = convertBitmapToMat(mCroppedBitmap);
-                            Mat matRgbaOutput = new Mat(mCroppedBitmap.getWidth(), mCroppedBitmap.getHeight(), CvType.CV_8UC4, Scalar.all(255));
+                            Mat matGray = new Mat(mCroppedBitmap.getWidth(), mCroppedBitmap.getHeight(), CvType.CV_8UC1, Scalar.all(255));
 
-                            //arucoSimple(inputFrame.gray().getNativeObjAddr(), matRgbaInput.getNativeObjAddr());
+                            convertGray(matRgbaInput.getNativeObjAddr(), matGray.getNativeObjAddr());
 
-                            //Log.d(TAG, "convertBitmapToMat");
+                            arucoSimple(matGray.getNativeObjAddr(), matRgbaInput.getNativeObjAddr());
+
                             mCroppedBitmap = converMatToBitmap(matRgbaInput);
-
-
                             Log.d(JNITAG,jniGetLog());
 
                         }
@@ -280,4 +278,5 @@ public class OnGetImageListener implements OnImageAvailableListener {
 
     public native void arucoSimple(long imgGray, long imgColor);
     public native String jniGetLog();
+    public native void convertGray(long imgRgba, long imgGray);
 }

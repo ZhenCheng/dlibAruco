@@ -47,16 +47,29 @@ JNIEXPORT void JNICALL Java_com_tzutalin_dlibtest_OnGetImageListener_arucoSimple
     for (auto m:lastDetectedMarkers)
         m.draw(matcolor, cv::Scalar(0, 0, 255), 2, true);
 
-    LogStream << "Called Teste-ALAN" << endl;
+    //LogStream << "Called Teste-ALAN" << endl;
 }
-JNIEXPORT jstring JNICALL
-Java_com_tzutalin_dlibtest_OnGetImageListener_jniGetLog(JNIEnv *env, jobject) {
 
+JNIEXPORT jstring JNICALL
+Java_com_tzutalin_dlibtest_OnGetImageListener_jniGetLog
+        (JNIEnv *env, jobject) {
 
     string str = LogStream.str();
     LogStream.str(std::string());
     return env->NewStringUTF(str.c_str());
 }
+
+JNIEXPORT void JNICALL Java_com_tzutalin_dlibtest_OnGetImageListener_convertGray
+        (JNIEnv *env, jobject,
+         jlong ImageColor, jlong ImageGray) {
+
+    cv::Mat &matcolor = *(cv::Mat *) ImageColor;
+    cv::Mat &matgray = *(cv::Mat *) ImageGray;
+
+    //LogStream << "convertGrayCalled" << endl;
+    cvtColor(matcolor, matgray, CV_RGBA2GRAY);
+}
+
 }
 
 namespace Java_com_tzutalin_dlibtest_OnGetImageListener{
@@ -73,3 +86,4 @@ namespace Java_com_tzutalin_dlibtest_OnGetImageListener{
     };
 
 }
+
