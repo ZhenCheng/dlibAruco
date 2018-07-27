@@ -16,6 +16,7 @@ namespace Java_com_tzutalin_dlibtest_OnGetImageListener {
     static aruco::MarkerDetector MDetector;
     static aruco::CameraParameters cameraParameters;
     static float markerSize=1;
+    static float minmarkersize=0;
 
     static std::vector<std::vector<aruco::Marker> > CalibrationMarkers;
 
@@ -42,10 +43,26 @@ JNIEXPORT void JNICALL Java_com_tzutalin_dlibtest_OnGetImageListener_arucoSimple
     // just detect if is matgray with 1 layer
     if (matgray.type() != CV_8UC1) return;
 
+    // add my dictionary aruco
+    std::string mydictionary = "/storage/emulated/0/data/myconnect.dict";
+    MDetector.setDictionary(mydictionary);
+
+//    // set my config
+//    std::string myconfig = "/storage/emulated/0/data/arucoConfig.yml";
+//    MDetector.loadParamsFromFile(myconfig);
+
+//    //cameraParameters.readFromXMLFile();
+
+    // set the detection mode
+    MDetector.setDetectionMode(DM_NORMAL, minmarkersize);
+
+    // set the corner refinement Method
+    MDetector.getParameters().setCornerRefinementMethod(CORNER_SUBPIX);
+
     lastDetectedMarkers = MDetector.detect(matgray, cameraParameters, markerSize);
 
     for (auto m:lastDetectedMarkers)
-        m.draw(matcolor, cv::Scalar(0, 0, 255), 2, true);
+        m.draw(matcolor, Scalar(0, 0, 255, 0), 2, CV_AA);
 
     //LogStream << "Called Teste-ALAN" << endl;
 }
