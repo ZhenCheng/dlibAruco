@@ -58,7 +58,7 @@ public class OnGetImageListener implements OnImageAvailableListener {
     private static final String TAG = "OnGetImageListener";
 
     static {
-        //System.loadLibrary("native-lib");
+        System.loadLibrary("native-lib");
     }
 
     private int mScreenRotation = 90;

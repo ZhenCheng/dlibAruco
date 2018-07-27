@@ -1,6 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
+    String OPENCV_DIR = 'libs/3rdparty/OpenCV3.4.1Java'
+
+    String OPENCV_DIR_jni = OPENCV_DIR + '/sdk/native/jni'
+
     compileSdkVersion rootProject.ext.androidCompileSdkVersion
     buildToolsVersion "${rootProject.ext.androidBuildToolsVersion}"
 
@@ -11,7 +15,23 @@ android {
         versionCode rootProject.ext.releaseVersionCode
         versionName "${rootProject.ext.releaseVersionName}"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11 -frtti -fexceptions -g0 -O2"
+                arguments "-DOpenCV_DIR=" + OPENCV_DIR_jni
+                arguments "-DVERBOSE=1 "
+                arguments "-DCMAKE_BUILD_TYPE=Release"
+                arguments "-DCMAKE_SHARED_LINKER_FLAGS=-Wl,--exclude-libs,libippicv.a -Wl,--exclude-libs,libippiw.a"
+            }
+        }
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -19,9 +39,9 @@ android {
         }
     }
 
-    sourceSets {
-        main {
-            assets.srcDirs = ['src/main/res/raw']
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
         }
     }
 }

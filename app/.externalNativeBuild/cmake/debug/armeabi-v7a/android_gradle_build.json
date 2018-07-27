@@ -1,0 +1,350 @@
+
+{
+	"buildFiles" : 
+	[
+		"/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/CMakeLists.txt",
+		"/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/home/alantavares/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"IlmImf-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "IlmImf",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/armeabi-v7a/libIlmImf.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"aruco-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "aruco",
+			"buildCommand" : "/home/alantavares/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a --target aruco",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG     -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/cameraparameters.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG     -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/cvdrawingutils.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG     -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/dictionary.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG     -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/ippe.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG     -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/marker.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG     -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/markerdetector.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG     -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/markerlabeler.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG     -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/markermap.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG     -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/posetracker.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG     -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/markerlabelers/dictionary_based.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG     -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/debug.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG     -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/markerlabelers/svmmarkers.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				}
+			],
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a/libs/3rdparty/aruco/libaruco.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libcpufeatures-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "libcpufeatures",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/armeabi-v7a/libcpufeatures.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libjasper-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "libjasper",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/armeabi-v7a/liblibjasper.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libjpeg-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "libjpeg",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/armeabi-v7a/liblibjpeg.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libpng-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "libpng",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/armeabi-v7a/liblibpng.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libprotobuf-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "libprotobuf",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/armeabi-v7a/liblibprotobuf.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libtiff-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "libtiff",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/armeabi-v7a/liblibtiff.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libwebp-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "libwebp",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/armeabi-v7a/liblibwebp.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"native-lib-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "native-lib",
+			"buildCommand" : "/home/alantavares/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a --target native-lib",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -Os -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				}
+			],
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_calib3d-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_calib3d",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_calib3d.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_core-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_core",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_core.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_dnn-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_dnn",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_dnn.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_features2d-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_features2d",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_features2d.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_flann-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_flann",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_flann.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_highgui-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_highgui",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_highgui.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_imgcodecs-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_imgcodecs",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_imgcodecs.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_imgproc-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_imgproc",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_imgproc.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_java-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_java",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/libs/armeabi-v7a/libopencv_java3.so",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_ml-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_ml",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_ml.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_objdetect-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_objdetect",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_objdetect.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_photo-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_photo",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_photo.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_shape-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_shape",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_shape.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_stitching-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_stitching",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_stitching.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_superres-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_superres",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_superres.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_video-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_video",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_video.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_videoio-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_videoio",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_videoio.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_videostab-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "opencv_videostab",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/armeabi-v7a/libopencv_videostab.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"tbb-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "tbb",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/armeabi-v7a/libtbb.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"tegra_hal-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "tegra_hal",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/armeabi-v7a/libtegra_hal.a",
+			"toolchain" : "9624032279011796790"
+		}
+	},
+	"toolchains" : 
+	{
+		"9624032279011796790" : 
+		{
+			"cCompilerExecutable" : "/home/alantavares/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/home/alantavares/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+		}
+	}
+}

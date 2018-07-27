@@ -10,7 +10,7 @@
 #include <sstream>
 #include <string>
 
-namespace Java_unicamp_alantavares_nativearucondk_MainActivity {
+namespace Java_com_tzutalin_dlibtest_OnGetImageListener {
 
     static std::vector<aruco::Marker> lastDetectedMarkers;
     static aruco::MarkerDetector MDetector;
@@ -28,11 +28,11 @@ namespace Java_unicamp_alantavares_nativearucondk_MainActivity {
 using namespace std;
 using namespace cv;
 using namespace aruco;
-using namespace Java_unicamp_alantavares_nativearucondk_MainActivity;
+using namespace Java_com_tzutalin_dlibtest_OnGetImageListener;
 
 extern "C" {
 
-JNIEXPORT void JNICALL Java_unicamp_alantavares_nativearucondk_MainActivity_arucoSimple
+JNIEXPORT void JNICALL Java_com_tzutalin_dlibtest_OnGetImageListener_arucoSimple
         (JNIEnv *env, jobject,
          jlong ImageGray, jlong ImageColor) {
 
@@ -50,7 +50,7 @@ JNIEXPORT void JNICALL Java_unicamp_alantavares_nativearucondk_MainActivity_aruc
     LogStream << "Called Teste-ALAN" << endl;
 }
 JNIEXPORT jstring JNICALL
-Java_unicamp_alantavares_nativearucondk_MainActivity_jniGetLog(JNIEnv *env, jobject) {
+Java_com_tzutalin_dlibtest_OnGetImageListener_jniGetLog(JNIEnv *env, jobject) {
 
 
     string str = LogStream.str();
@@ -59,7 +59,7 @@ Java_unicamp_alantavares_nativearucondk_MainActivity_jniGetLog(JNIEnv *env, jobj
 }
 }
 
-namespace Java_uco_ava_core_ArucoTestActivity{
+namespace Java_com_tzutalin_dlibtest_OnGetImageListener{
 
     std::string ConvertJString(JNIEnv* env, jstring str)
     {
