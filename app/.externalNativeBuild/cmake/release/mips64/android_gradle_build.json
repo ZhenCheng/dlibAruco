@@ -1,0 +1,350 @@
+
+{
+	"buildFiles" : 
+	[
+		"/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/CMakeLists.txt",
+		"/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/home/alantavares/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64 --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"IlmImf-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "IlmImf",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/mips64/libIlmImf.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"aruco-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "aruco",
+			"buildCommand" : "/home/alantavares/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64 --target aruco",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/cameraparameters.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				},
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/cvdrawingutils.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				},
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/dictionary.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				},
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/ippe.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				},
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/marker.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				},
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/markerdetector.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				},
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/markerlabeler.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				},
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/markermap.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				},
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/posetracker.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				},
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/markerlabelers/dictionary_based.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				},
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/debug.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				},
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot   -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/aruco/markerlabelers/svmmarkers.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				}
+			],
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64/libs/3rdparty/aruco/libaruco.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"lib_opencv-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "lib_opencv",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/src/main/jniLibs/mips64/libopencv_java3.so",
+			"toolchain" : "9624032279011796790"
+		},
+		"libcpufeatures-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "libcpufeatures",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/mips64/libcpufeatures.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libjasper-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "libjasper",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/mips64/liblibjasper.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libjpeg-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "libjpeg",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/mips64/liblibjpeg.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libpng-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "libpng",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/mips64/liblibpng.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libprotobuf-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "libprotobuf",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/mips64/liblibprotobuf.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libtiff-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "libtiff",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/mips64/liblibtiff.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"libwebp-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "libwebp",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/mips64/liblibwebp.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"native-lib-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "native-lib",
+			"buildCommand" : "/home/alantavares/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64 --target native-lib",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/home/alantavares/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/alantavares/Android/Sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include -isystem ../../../../libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni/include/opencv -I../../../../libs/3rdparty -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /home/alantavares/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/alantavares/Android/Sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -g0 -O2 -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/mips64"
+				}
+			],
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/build/intermediates/cmake/release/obj/mips64/libnative-lib.so",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_calib3d-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_calib3d",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_calib3d.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_core-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_core",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_core.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_dnn-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_dnn",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_dnn.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_features2d-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_features2d",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_features2d.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_flann-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_flann",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_flann.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_highgui-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_highgui",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_highgui.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_imgcodecs-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_imgcodecs",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_imgcodecs.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_imgproc-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_imgproc",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_imgproc.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_java-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_java",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/libs/mips64/libopencv_java3.so",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_ml-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_ml",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_ml.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_objdetect-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_objdetect",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_objdetect.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_photo-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_photo",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_photo.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_shape-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_shape",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_shape.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_stitching-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_stitching",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_stitching.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_superres-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_superres",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_superres.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_video-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_video",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_video.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_videoio-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_videoio",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_videoio.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"opencv_videostab-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "opencv_videostab",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/staticlibs/mips64/libopencv_videostab.a",
+			"toolchain" : "9624032279011796790"
+		},
+		"tbb-Release-mips64" : 
+		{
+			"abi" : "mips64",
+			"artifactName" : "tbb",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/mips64/libtbb.a",
+			"toolchain" : "9624032279011796790"
+		}
+	},
+	"toolchains" : 
+	{
+		"9624032279011796790" : 
+		{
+			"cCompilerExecutable" : "/home/alantavares/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/home/alantavares/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+		}
+	}
+}

@@ -104,6 +104,14 @@
 			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/armeabi-v7a/libs/3rdparty/aruco/libaruco.a",
 			"toolchain" : "9624032279011796790"
 		},
+		"lib_opencv-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "lib_opencv",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/src/main/jniLibs/armeabi-v7a/libopencv_java3.so",
+			"toolchain" : "9624032279011796790"
+		},
 		"libcpufeatures-Release-armeabi-v7a" : 
 		{
 			"abi" : "armeabi-v7a",

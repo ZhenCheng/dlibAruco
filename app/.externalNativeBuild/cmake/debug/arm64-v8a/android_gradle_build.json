@@ -104,6 +104,14 @@
 			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/debug/arm64-v8a/libs/3rdparty/aruco/libaruco.a",
 			"toolchain" : "9624032279011796790"
 		},
+		"lib_opencv-Release-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "lib_opencv",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/src/main/jniLibs/arm64-v8a/libopencv_java3.so",
+			"toolchain" : "9624032279011796790"
+		},
 		"libcpufeatures-Release-arm64-v8a" : 
 		{
 			"abi" : "arm64-v8a",

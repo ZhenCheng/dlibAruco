@@ -44,6 +44,11 @@ import com.tzutalin.dlib.VisionDetRet;
 
 import junit.framework.Assert;
 
+import org.opencv.android.Utils;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+import org.opencv.core.Scalar;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +61,7 @@ public class OnGetImageListener implements OnImageAvailableListener {
 
     private static final int INPUT_SIZE = 320;
     private static final String TAG = "OnGetImageListener";
+    private static final String JNITAG = "JNIArucoTest";
 
     static {
         System.loadLibrary("native-lib");
@@ -141,6 +147,29 @@ public class OnGetImageListener implements OnImageAvailableListener {
         canvas.drawBitmap(src, matrix, null);
     }
 
+    private Mat convertBitmapToMat(Bitmap inRgbaImage){
+
+        // create a Mat to Output
+        Mat rgbaMatOut = new Mat(inRgbaImage.getWidth(), inRgbaImage.getHeight(), CvType.CV_8UC4, Scalar.all(255));
+        Bitmap bm32 = inRgbaImage.copy(Config.ARGB_8888,true);
+
+        // convert Bitmap to Mat using OpenCV-Java
+        Utils.bitmapToMat(bm32,rgbaMatOut);
+
+        return rgbaMatOut;
+    }
+
+    private Bitmap converMatToBitmap(Mat rgbaMat){
+
+        // create a Bitmap to Output
+        Bitmap bmOutput = Bitmap.createBitmap(rgbaMat.width(),rgbaMat.height(), Config.ARGB_8888);
+
+        // convert Mat to Bitmap using OpenCV-Java
+        Utils.matToBitmap(rgbaMat,bmOutput);
+
+        return bmOutput;
+    }
+
     @Override
     public void onImageAvailable(final ImageReader reader) {
         Image image = null;
@@ -224,7 +253,19 @@ public class OnGetImageListener implements OnImageAvailableListener {
                         long startTime = System.currentTimeMillis();
 
                         synchronized (OnGetImageListener.this) {
-                            //Log.d(TAG, "AlanTest");
+
+                            Log.d(TAG, "StartOnCameraFrame");
+                            Mat matRgbaInput = convertBitmapToMat(mCroppedBitmap);
+                            Mat matRgbaOutput = new Mat(mCroppedBitmap.getWidth(), mCroppedBitmap.getHeight(), CvType.CV_8UC4, Scalar.all(255));
+
+                            //arucoSimple(inputFrame.gray().getNativeObjAddr(), matRgbaInput.getNativeObjAddr());
+
+                            //Log.d(TAG, "convertBitmapToMat");
+                            mCroppedBitmap = converMatToBitmap(matRgbaInput);
+
+
+                            Log.d(JNITAG,jniGetLog());
+
                         }
                         long endTime = System.currentTimeMillis();
                         mTransparentTitleView.setText("Time cost: " + String.valueOf((endTime - startTime) / 1000f) + " sec");

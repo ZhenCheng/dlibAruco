@@ -1,0 +1,14 @@
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/rebuild_cache.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/list_install_components.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/install.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/install/local.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/install/strip.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/edit_cache.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/native-lib.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/libs/3rdparty/aruco/CMakeFiles/edit_cache.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/libs/3rdparty/aruco/CMakeFiles/rebuild_cache.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/libs/3rdparty/aruco/CMakeFiles/list_install_components.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/libs/3rdparty/aruco/CMakeFiles/install.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/libs/3rdparty/aruco/CMakeFiles/install/local.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/libs/3rdparty/aruco/CMakeFiles/install/strip.dir
+/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/.externalNativeBuild/cmake/release/armeabi/libs/3rdparty/aruco/CMakeFiles/aruco.dir

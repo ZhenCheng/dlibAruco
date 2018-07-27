@@ -205,7 +205,7 @@ aruco_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;open
 log-lib:FILEPATH=/home/alantavares/Android/Sdk/ndk-bundle/platforms/android-21/arch-arm64/usr/lib/liblog.so
 
 //Dependencies for the target
-native-lib_LIB_DEPENDS:STATIC=general;/home/alantavares/Android/Sdk/ndk-bundle/platforms/android-21/arch-arm64/usr/lib/liblog.so;general;opencv_highgui;general;opencv_features2d;general;opencv_shape;general;opencv_imgcodecs;general;opencv_ml;general;opencv_videoio;general;opencv_dnn;general;opencv_flann;general;opencv_objdetect;general;opencv_core;general;opencv_calib3d;general;opencv_video;general;opencv_superres;general;opencv_photo;general;opencv_imgproc;general;opencv_stitching;general;opencv_videostab;general;aruco;
+native-lib_LIB_DEPENDS:STATIC=general;/home/alantavares/Android/Sdk/ndk-bundle/platforms/android-21/arch-arm64/usr/lib/liblog.so;general;lib_opencv;general;opencv_highgui;general;opencv_features2d;general;opencv_shape;general;opencv_imgcodecs;general;opencv_ml;general;opencv_videoio;general;opencv_dnn;general;opencv_flann;general;opencv_objdetect;general;opencv_core;general;opencv_calib3d;general;opencv_video;general;opencv_superres;general;opencv_photo;general;opencv_imgproc;general;opencv_stitching;general;opencv_videostab;general;aruco;
 
 
 ########################

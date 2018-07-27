@@ -128,6 +128,14 @@
 			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/libs/3rdparty/OpenCV3.4.1Java/sdk/native/3rdparty/libs/x86_64/libittnotify.a",
 			"toolchain" : "9624032279011796790"
 		},
+		"lib_opencv-Release-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "lib_opencv",
+			"buildType" : "release",
+			"output" : "/home/alantavares/AndroidStudioProjects/ProjetosConnectRobotic/dlibAruco/app/src/main/jniLibs/x86_64/libopencv_java3.so",
+			"toolchain" : "9624032279011796790"
+		},
 		"libcpufeatures-Release-x86_64" : 
 		{
 			"abi" : "x86_64",
