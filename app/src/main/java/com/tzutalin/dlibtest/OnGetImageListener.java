@@ -57,6 +57,10 @@ public class OnGetImageListener implements OnImageAvailableListener {
     private static final int INPUT_SIZE = 320;
     private static final String TAG = "OnGetImageListener";
 
+    static {
+        //System.loadLibrary("native-lib");
+    }
+
     private int mScreenRotation = 90;
 
     private int mPreviewWdith = 0;
@@ -84,7 +88,6 @@ public class OnGetImageListener implements OnImageAvailableListener {
         this.mInferenceHandler = handler;
         mFaceDet = new FaceDet(Constants.getFaceShapeModelPath());
         mWindow = new FloatingCameraWindow(mContext);
-
 
     }
 
@@ -233,4 +236,7 @@ public class OnGetImageListener implements OnImageAvailableListener {
 
         Trace.endSection();
     }
+
+    public native void arucoSimple(long imgGray, long imgColor);
+    public native String jniGetLog();
 }
