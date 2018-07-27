@@ -54,7 +54,7 @@ import java.util.List;
 @SuppressLint("NewApi")
 public class OnGetImageListener implements OnImageAvailableListener {
 
-    private static final int INPUT_SIZE = 480;
+    private static final int INPUT_SIZE = 320;
     private static final String TAG = "OnGetImageListener";
 
     private int mScreenRotation = 90;
@@ -73,7 +73,6 @@ public class OnGetImageListener implements OnImageAvailableListener {
     private FaceDet mFaceDet;
     private TrasparentTitleView mTransparentTitleView;
     private FloatingCameraWindow mWindow;
-    private Paint mFaceLandmardkPaint;
 
     public void initialize(
             final Context context,
@@ -86,17 +85,11 @@ public class OnGetImageListener implements OnImageAvailableListener {
         mFaceDet = new FaceDet(Constants.getFaceShapeModelPath());
         mWindow = new FloatingCameraWindow(mContext);
 
-        mFaceLandmardkPaint = new Paint();
-        mFaceLandmardkPaint.setColor(Color.GREEN);
-        mFaceLandmardkPaint.setStrokeWidth(2);
-        mFaceLandmardkPaint.setStyle(Paint.Style.STROKE);
+
     }
 
     public void deInitialize() {
         synchronized (OnGetImageListener.this) {
-            if (mFaceDet != null) {
-                mFaceDet.release();
-            }
 
             if (mWindow != null) {
                 mWindow.release();
