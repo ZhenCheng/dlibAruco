@@ -46,6 +46,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.util.Size;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
@@ -73,23 +74,16 @@ public class CameraConnectionFragment extends Fragment {
      * The camera preview size will be chosen to be the smallest frame by pixel size capable of
      * containing a DESIRED_SIZE x DESIRED_SIZE square.
      */
-    private static final int MINIMUM_PREVIEW_SIZE = 320;
-    private static final String TAG = "CameraConnectionFragment";
+    private static final int WIDTH_PREVIEW_SIZE = 1280;//640;
+    private static final int HEIGHT_PREVIEW_SIZE = 720;//480;
+    private static final String TAG = CameraConnectionFragment.class.getName();
 
     private TrasparentTitleView mScoreView;
 
     /**
      * Conversion from screen rotation to JPEG orientation.
      */
-    private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
     private static final String FRAGMENT_DIALOG = "dialog";
-
-    static {
-        ORIENTATIONS.append(Surface.ROTATION_0, 90);
-        ORIENTATIONS.append(Surface.ROTATION_90, 0);
-        ORIENTATIONS.append(Surface.ROTATION_180, 270);
-        ORIENTATIONS.append(Surface.ROTATION_270, 180);
-    }
 
     /**
      * {@link android.view.TextureView.SurfaceTextureListener} handles several lifecycle events on a
@@ -100,7 +94,7 @@ public class CameraConnectionFragment extends Fragment {
                 @Override
                 public void onSurfaceTextureAvailable(
                         final SurfaceTexture texture, final int width, final int height) {
-                    openCamera(width, height);
+                    openCamera();
                 }
 
                 @Override
@@ -253,31 +247,25 @@ public class CameraConnectionFragment extends Fragment {
      * @param choices     The list of sizes that the camera supports for the intended output class
      * @param width       The minimum desired width
      * @param height      The minimum desired height
-     * @param aspectRatio The aspect ratio
      * @return The optimal {@code Size}, or an arbitrary one if none were big enough
      */
     @SuppressLint({"LongLogTag", "NewApi"})
     @DebugLog
-    private static Size chooseOptimalSize(
-            final Size[] choices, final int width, final int height, final Size aspectRatio) {
+    private static Size chooseOptimalSize(Size[] choices, int width, int height) {
         // Collect the supported resolutions that are at least as big as the preview Surface
-        final List<Size> bigEnough = new ArrayList<Size>();
-        for (final Size option : choices) {
-            if (option.getHeight() >= MINIMUM_PREVIEW_SIZE && option.getWidth() >= MINIMUM_PREVIEW_SIZE) {
-                Timber.tag(TAG).i("Adding size: " + option.getWidth() + "x" + option.getHeight());
+        List<Size> bigEnough = new ArrayList<>();
+        for (Size option : choices) {
+            Log.d(TAG, String.format("Available sizes: W: %d, h: %d", option.getWidth(), option.getHeight()));
+            if (option.getWidth() == width && option.getHeight() == height) {
                 bigEnough.add(option);
-            } else {
-                Timber.tag(TAG).i("Not adding size: " + option.getWidth() + "x" + option.getHeight());
             }
         }
 
         // Pick the smallest of those, assuming we found any
         if (bigEnough.size() > 0) {
-            final Size chosenSize = Collections.min(bigEnough, new CompareSizesByArea());
-            Timber.tag(TAG).i("Chosen size: " + chosenSize.getWidth() + "x" + chosenSize.getHeight());
-            return chosenSize;
+            return Collections.min(bigEnough, new CompareSizesByArea());
         } else {
-            Timber.tag(TAG).e("Couldn't find any suitable preview size");
+            Log.e(TAG, "Couldn't find any suitable preview size, requested width: " + width + ", height: " + height);
             return choices[0];
         }
     }
@@ -313,7 +301,7 @@ public class CameraConnectionFragment extends Fragment {
         // a camera and start preview from here (otherwise, we wait until the surface is ready in
         // the SurfaceTextureListener).
         if (textureView.isAvailable()) {
-            openCamera(textureView.getWidth(), textureView.getHeight());
+            openCamera();
         } else {
             textureView.setSurfaceTextureListener(surfaceTextureListener);
         }
@@ -388,8 +376,8 @@ public class CameraConnectionFragment extends Fragment {
                 // Danger, W.R.! Attempting to use too large a preview size could  exceed the camera
                 // bus' bandwidth limitation, resulting in gorgeous previews but the storage of
                 // garbage capture data.
-                previewSize =
-                        chooseOptimalSize(map.getOutputSizes(SurfaceTexture.class), width, height, largest);
+                previewSize = chooseOptimalSize(map.getOutputSizes(SurfaceTexture.class),
+                        WIDTH_PREVIEW_SIZE, HEIGHT_PREVIEW_SIZE);
 
                 // We fit the aspect ratio of TextureView to the size of preview we picked.
                 final int orientation = getResources().getConfiguration().orientation;
@@ -417,9 +405,9 @@ public class CameraConnectionFragment extends Fragment {
      */
     @SuppressLint({"LongLogTag", "NewApi"})
     @DebugLog
-    private void openCamera(final int width, final int height) {
-        setUpCameraOutputs(width, height);
-        configureTransform(width, height);
+    private void openCamera() {
+        setUpCameraOutputs(WIDTH_PREVIEW_SIZE, HEIGHT_PREVIEW_SIZE);
+        configureTransform(WIDTH_PREVIEW_SIZE, HEIGHT_PREVIEW_SIZE);
         final Activity activity = getActivity();
         final CameraManager manager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
         try {

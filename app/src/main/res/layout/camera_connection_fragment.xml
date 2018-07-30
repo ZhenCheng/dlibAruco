@@ -7,13 +7,24 @@
         android:id="@+id/texture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        />
+        android:layout_below="@+id/results"
+        android:layout_toLeftOf="@+id/spaceRight"
+        android:layout_toStartOf="@+id/spaceRight" />
     
     <com.tzutalin.dlibtest.TrasparentTitleView
         android:id="@+id/results"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
         android:layout_alignParentTop="true" />
-        
+
+    <Space
+        android:id="@+id/spaceRight"
+        android:background="#000000"
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/results" />
+
 </RelativeLayout>

@@ -48,10 +48,10 @@ JNIEXPORT void JNICALL Java_com_tzutalin_dlibtest_OnGetImageListener_arucoSimple
     MDetector.setDictionary(mydictionary);
 
 //    // set my config
-//    std::string myconfig = "/storage/emulated/0/data/arucoConfig.yml";
-//    MDetector.loadParamsFromFile(myconfig);
-
-//    //cameraParameters.readFromXMLFile();
+//    //std::string myconfig = "/storage/emulated/0/data/arucoConfig.yml";
+//    MDetector.loadParamsFromFile("/storage/emulated/0/data/arucoConfig.yml");
+    // set data file camera calibration
+    cameraParameters.readFromXMLFile("/storage/emulated/0/data/calibration_smartphone_1280x720.yml");
 
     // set the detection mode
     MDetector.setDetectionMode(DM_NORMAL, minmarkersize);
@@ -63,6 +63,22 @@ JNIEXPORT void JNICALL Java_com_tzutalin_dlibtest_OnGetImageListener_arucoSimple
 
     for (auto m:lastDetectedMarkers)
         m.draw(matcolor, Scalar(0, 0, 255, 0), 2, CV_AA);
+
+    if (cameraParameters.isValid()) {
+        for (auto m:lastDetectedMarkers){
+            //aruco::CvDrawingUtils::draw3dAxis(matcolor, m, cameraParameters, 2);
+            //aruco::CvDrawingUtils::draw3dCube(matcolor, m, cameraParameters, 2);
+            LogStream << " LandMarker [" << m.id << "]: " <<
+                      "  Tx: " << m.Tvec.ptr<float>(0)[0] << " m "<<
+                      "\tTy: " << m.Tvec.ptr<float>(1)[0] << " m "<<
+                      "\tTz: " << m.Tvec.ptr<float>(2)[0] << " m "<<
+                      "\tRx: " << m.Rvec.ptr<float>(0)[0] << " rad "<<
+                      "\tRy: " << m.Rvec.ptr<float>(1)[0] << " rad "<<
+                      "\tRz: " << m.Rvec.ptr<float>(2)[0] << " rad "<< endl;
+            putText(matcolor, "X", Point(matcolor.cols / 2, matcolor.rows / 2), 1.2, 1.2, Scalar(0, 0, 255), 2);
+            //putText(matcolor, "Tz: " + to_string(m.Tvec.ptr<float>(2)[0]) + " m ", Point(10, 480 / 2), 1.2, 1.2, Scalar(0, 0, 255), 2);
+        }
+    }
 
     //LogStream << "Called Teste-ALAN" << endl;
 }
