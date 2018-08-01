@@ -84,6 +84,8 @@ public class OnGetImageListener implements OnImageAvailableListener {
     private TrasparentTitleView mTransparentTitleView;
     private FloatingCameraWindow mWindow;
 
+    private static float tVecX;
+
     public void initialize(
             final Context context,
             final AssetManager assetManager,
@@ -257,17 +259,20 @@ public class OnGetImageListener implements OnImageAvailableListener {
                             Mat matRgbaInput = convertBitmapToMat(mCroppedBitmap);
                             Mat matGray = new Mat(mCroppedBitmap.getWidth(), mCroppedBitmap.getHeight(), CvType.CV_8UC1, Scalar.all(255));
 
-                            convertGray(matRgbaInput.getNativeObjAddr(), matGray.getNativeObjAddr());
+                            //convertGray(matRgbaInput.getNativeObjAddr(), matGray.getNativeObjAddr());
 
-                            arucoSimple(matGray.getNativeObjAddr(), matRgbaInput.getNativeObjAddr());
+
+                            tVecX = arucoSimple(matGray.getNativeObjAddr(), matRgbaInput.getNativeObjAddr());
+                            //Log.d(TAG, String.format("Tx: %.3f", tVecX));
+                            mTransparentTitleView.setText("Altura(Tz): " + String.valueOf(tVecX));
 
                             mCroppedBitmap = converMatToBitmap(matRgbaInput);
                             Log.d(JNITAG,jniGetLog());
 
                         }
                         long endTime = System.currentTimeMillis();
-                        mTransparentTitleView.setText("Time cost: " + String.valueOf((endTime - startTime) / 1000f) + " sec");
-
+                        //mTransparentTitleView.setText("Time cost: " + String.valueOf((endTime - startTime) / 1000f ) + " sec");
+                        //mTransparentTitleView.setText("Frames p/second: " + String.valueOf(1/ ((endTime - startTime) / 1000f) ) + " fps");
                         mWindow.setRGBBitmap(mCroppedBitmap);
                         mIsComputing = false;
                     }
@@ -276,7 +281,8 @@ public class OnGetImageListener implements OnImageAvailableListener {
         Trace.endSection();
     }
 
-    public native void arucoSimple(long imgGray, long imgColor);
+    public native float arucoSimple(long imgGray, long imgColor);
+    //public native void convertGray(long imgRgba, long imgGray);
     public native String jniGetLog();
-    public native void convertGray(long imgRgba, long imgGray);
+
 }

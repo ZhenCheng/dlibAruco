@@ -74,8 +74,10 @@ public class CameraConnectionFragment extends Fragment {
      * The camera preview size will be chosen to be the smallest frame by pixel size capable of
      * containing a DESIRED_SIZE x DESIRED_SIZE square.
      */
-    private static final int WIDTH_PREVIEW_SIZE = 1280;//640;
-    private static final int HEIGHT_PREVIEW_SIZE = 720;//480;
+//    private static final int WIDTH_PREVIEW_SIZE = 1280;
+//    private static final int HEIGHT_PREVIEW_SIZE = 720;
+    private static final int WIDTH_PREVIEW_SIZE = 640;
+    private static final int HEIGHT_PREVIEW_SIZE = 480;
     private static final String TAG = CameraConnectionFragment.class.getName();
 
     private TrasparentTitleView mScoreView;
