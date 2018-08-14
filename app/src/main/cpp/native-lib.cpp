@@ -61,6 +61,7 @@ JNIEXPORT float JNICALL Java_com_tzutalin_dlibtest_OnGetImageListener_arucoSimpl
     // set the corner refinement Method
     MDetector.getParameters().setCornerRefinementMethod(CORNER_SUBPIX);
 
+    // run detection marker
     lastDetectedMarkers = MDetector.detect(matgray, cameraParameters, markerSize);
 
     if (cameraParameters.isValid()) {

@@ -261,7 +261,6 @@ public class OnGetImageListener implements OnImageAvailableListener {
 
                             //convertGray(matRgbaInput.getNativeObjAddr(), matGray.getNativeObjAddr());
 
-
                             tVecX = arucoSimple(matGray.getNativeObjAddr(), matRgbaInput.getNativeObjAddr());
                             //Log.d(TAG, String.format("Tx: %.3f", tVecX));
                             mTransparentTitleView.setText("Altura(Tz): " + String.valueOf(tVecX));
