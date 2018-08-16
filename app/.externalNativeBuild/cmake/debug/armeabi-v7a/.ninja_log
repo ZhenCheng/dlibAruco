@@ -14,3 +14,4 @@
 12634	13691	0	libs/3rdparty/aruco/libaruco.a	568b37e7c1002e07
 13691	14834	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	648ae846094499d6
 14834	15576	0	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	7f40c63943e92cba
+4	343	0	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	7f40c63943e92cba

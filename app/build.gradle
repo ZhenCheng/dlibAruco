@@ -24,14 +24,14 @@ android {
                 arguments "-DCMAKE_BUILD_TYPE=Release"
                 arguments "-DANDROID_STL=gnustl_shared"
                 arguments "-DCMAKE_SHARED_LINKER_FLAGS=-Wl,--exclude-libs,libippicv.a -Wl,--exclude-libs,libippiw.a"
-                abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64'
+                //abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64'
             }
         }
     }
 
     sourceSets {
         main {
-            jniLibs.srcDirs = [OPENCV_DIR_nativelibs]
+            jniLibs.srcDirs = ['src/main/jniLibs']
         }
     }
 

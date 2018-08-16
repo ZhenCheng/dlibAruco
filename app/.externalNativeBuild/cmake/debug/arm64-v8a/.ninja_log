@@ -1,0 +1,16 @@
+# ninja log v5
+1	4033	0	libs/3rdparty/aruco/CMakeFiles/aruco.dir/cvdrawingutils.cpp.o	e4be57b4087f5ede
+1	4871	0	libs/3rdparty/aruco/CMakeFiles/aruco.dir/markerlabelers/dictionary_based.cpp.o	12f5be4f63530405
+1	4958	0	libs/3rdparty/aruco/CMakeFiles/aruco.dir/cameraparameters.cpp.o	7fa76667601fdaa0
+1	6184	0	libs/3rdparty/aruco/CMakeFiles/aruco.dir/ippe.cpp.o	8d3a62f4dfa2be8b
+1	6316	0	libs/3rdparty/aruco/CMakeFiles/aruco.dir/dictionary.cpp.o	ebeab4664188647c
+4958	7661	0	libs/3rdparty/aruco/CMakeFiles/aruco.dir/markerlabeler.cpp.o	bf8f2d3c50710029
+4037	7799	0	libs/3rdparty/aruco/CMakeFiles/aruco.dir/marker.cpp.o	cdb473ea9cc6a7ad
+7661	8434	0	libs/3rdparty/aruco/CMakeFiles/aruco.dir/debug.cpp.o	c52315288b5f0dd9
+6316	8831	0	libs/3rdparty/aruco/CMakeFiles/aruco.dir/markerlabelers/svmmarkers.cpp.o	b6d42d6d80c4543b
+6184	9822	0	libs/3rdparty/aruco/CMakeFiles/aruco.dir/markermap.cpp.o	cc4e31fe9cee209f
+4871	11534	0	libs/3rdparty/aruco/CMakeFiles/aruco.dir/markerdetector.cpp.o	42919e2ee7d61003
+0	13062	0	libs/3rdparty/aruco/CMakeFiles/aruco.dir/posetracker.cpp.o	6fe108375035666d
+13062	14115	0	libs/3rdparty/aruco/libaruco.a	b2101a31be0a6862
+14115	15166	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	805fba9ede0332
+15166	15853	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	ebf12da939ed327d
