@@ -14,6 +14,7 @@ arguments :
 -DOpenCV_DIR=libs/3rdparty/OpenCV3.4.1Java/sdk/native/jni
 -DVERBOSE=1 
 -DCMAKE_BUILD_TYPE=Release
+-DANDROID_STL=gnustl_shared
 -DCMAKE_SHARED_LINKER_FLAGS=-Wl,--exclude-libs,libippicv.a -Wl,--exclude-libs,libippiw.a
 jvmArgs : 
 

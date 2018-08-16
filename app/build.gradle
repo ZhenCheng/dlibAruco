@@ -22,6 +22,7 @@ android {
                 arguments "-DOpenCV_DIR=" + OPENCV_DIR_jni
                 arguments "-DVERBOSE=1 "
                 arguments "-DCMAKE_BUILD_TYPE=Release"
+                arguments "-DANDROID_STL=gnustl_shared"
                 arguments "-DCMAKE_SHARED_LINKER_FLAGS=-Wl,--exclude-libs,libippicv.a -Wl,--exclude-libs,libippiw.a"
                 abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64'
             }
@@ -30,7 +31,7 @@ android {
 
     sourceSets {
         main {
-            jniLibs.srcDirs = ['src/main/jniLibs']
+            jniLibs.srcDirs = [OPENCV_DIR_nativelibs]
         }
     }
 
@@ -78,7 +79,7 @@ dependencies {
 apply plugin: 'com.jakewharton.hugo'
 
 // Map for the version code that gives each ABI a value.
-ext.abiCodes = ['armeabi-v7a':1, x86:2, x86_64:3]
+ext.abiCodes = ['armeabi-v7a':1, x86:2, 'arm64-v8a':3]
 
 import com.android.build.OutputFile
 
